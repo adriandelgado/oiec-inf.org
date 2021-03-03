@@ -1,0 +1,15 @@
+{{ define "main" }}
+  <main class="items-center flex-1 mx-4 mt-4 md:mx-12 lg:mx-24 sm:mt-16">
+    <ul>
+      {{ range .Paginator.Pages }}
+        <li>
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+          <div>
+            {{ .Summary }}
+          </div>
+        </li>
+      {{ end }}
+    </ul>
+    {{ partial "pagination.html" . }}
+  </main>
+{{ end }}

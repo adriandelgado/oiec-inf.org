@@ -1,0 +1,14 @@
+{{ $dateTime := .PublishDate.Format "2006-01-02" }}
+<time datetime="{{ $dateTime }}">
+  Publicado el: {{ .Date.Day }} de
+  {{ index $.Site.Data.meses (printf "%d" .Date.Month) }} de {{ .Date.Year }}
+  Ultima mod: {{ .Lastmod.Day }}
+  {{ index $.Site.Data.meses (printf "%d" .Lastmod.Month) }}
+  {{ .Lastmod.Year }}
+</time>
+{{ with .Params.tags }}
+  {{ range . }}
+    {{ $href := print (absURL "tags/") (urlize .) }}
+    <a href="{{ $href }}">{{ . }}</a>
+  {{ end }}
+{{ end }}

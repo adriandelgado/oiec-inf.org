@@ -1,0 +1,11 @@
+{{ define "main" }}
+  <main class="items-center flex-1 mx-4 mt-4 md:mx-12 lg:mx-24 sm:mt-16">
+    {{ range .Pages }}
+      <article class="mb-16 prose text-gray-700 sm:mx-auto lg:prose-lg">
+        <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+        {{ partial "date-and-tags.html" . }}
+        {{ .Content }}
+      </article>
+    {{ end }}
+  </main>
+{{ end }}

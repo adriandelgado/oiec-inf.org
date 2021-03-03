@@ -1,0 +1,27 @@
+{
+  "name": "oiec-inf.org",
+  "version": "0.1.0",
+  "description": "Pagina web de la OIEC",
+  "main": "index.js",
+  "scripts": {
+    "server": "hugo server",
+    "build": "NODE_ENV=production hugo --gc --minify --cleanDestinationDir"
+  },
+  "author": "Adrian Delgado",
+  "license": "MIT",
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.4.0",
+    "autoprefixer": "^10.2.4",
+    "postcss": "^8.2.6",
+    "postcss-cli": "^8.3.1",
+    "prettier": "^2.2.1",
+    "prettier-plugin-go-template": "0.0.10",
+    "tailwindcss": "^2.0.3"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 1%",
+    "not dead",
+    "maintained node versions"
+  ]
+}

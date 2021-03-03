@@ -1,0 +1,87 @@
+{{ $currentPage := . }}
+<header class="bg-gray-800 shadow-xl">
+  <nav class="flex items-center justify-between max-w-5xl p-4 mx-auto">
+    <a
+      class="flex space-x-3 text-lg font-bold text-gray-100"
+      href="{{ site.BaseURL }}"
+      ><img src="/logo-oiec.svg" alt="logo-oiec" class="w-8 h-8" />
+      <span class="hidden md:inline">OIEC</span></a
+    >
+    <ul class="items-center hidden space-x-3 sm:flex">
+      {{ range site.Sections }}
+        <li class="flex">
+          <a
+            class="{{ if eq $currentPage.Title .Name }}bg-gray-900 text-white {{ else }}text-gray-300 hover:bg-gray-700 hover:text-white {{ end }} rounded px-3 py-2 text-sm font-medium text-center"
+            href="{{ .RelPermalink }}"
+            >{{ .Title }}</a
+          >
+        </li>
+      {{ end }}
+    </ul>
+    <button
+      type="button"
+      id="menu-button"
+      class="inline-flex items-center justify-center p-2 text-gray-400 rounded-md sm:hidden hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+      aria-controls="mobile-menu"
+      aria-expanded="false"
+    >
+      <span class="sr-only">Abrir menu principal</span>
+      <svg
+        class="block w-6 h-6"
+        id="menu-closed"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        aria-hidden="true"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"
+        />
+      </svg>
+      <svg
+        class="hidden w-6 h-6"
+        id="menu-open"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        aria-hidden="true"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M6 18L18 6M6 6l12 12"
+        />
+      </svg>
+    </button>
+  </nav>
+  <ul class="hidden px-2 pt-2 pb-3 space-y-1" id="menu-list">
+    {{ range site.Menus.main }}
+      <li>
+        <a
+          class="{{ if eq $currentPage.Title .Name }} text-white bg-gray-900 {{ else }} text-gray-300 hover:bg-gray-700 hover:text-white {{ end }} rounded block px-3 py-2 text-base font-medium"
+          href="{{ .URL }}"
+          >{{ .Name }}</a
+        >
+      </li>
+    {{ end }}
+  </ul>
+</header>
+<script>
+  const button = document.querySelector("#menu-button");
+  const iconOpen = document.querySelector("#menu-open");
+  const iconClosed = document.querySelector("#menu-closed");
+  const menu = document.querySelector("#menu-list");
+  button.addEventListener("click", () => {
+    iconOpen.classList.toggle("block");
+    iconOpen.classList.toggle("hidden");
+    iconClosed.classList.toggle("block");
+    iconClosed.classList.toggle("hidden");
+    menu.classList.toggle("hidden");
+  });
+</script>
