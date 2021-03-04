@@ -11,7 +11,7 @@
       {{ range site.Sections }}
         <li class="flex">
           <a
-            class="{{ if eq $currentPage.Title .Name }}bg-gray-900 text-white {{ else }}text-gray-300 hover:bg-gray-700 hover:text-white {{ end }} rounded px-3 py-2 text-sm font-medium text-center"
+            class="{{ if eq $currentPage.Title .Title }}bg-gray-900 text-white {{ else }}text-gray-300 hover:bg-gray-700 hover:text-white {{ end }} rounded px-3 py-2 text-sm font-medium text-center"
             href="{{ .RelPermalink }}"
             >{{ .Title }}</a
           >
@@ -61,12 +61,12 @@
     </button>
   </nav>
   <ul class="hidden px-2 pt-2 pb-3 space-y-1" id="menu-list">
-    {{ range site.Menus.main }}
+    {{ range site.Sections }}
       <li>
         <a
-          class="{{ if eq $currentPage.Title .Name }} text-white bg-gray-900 {{ else }} text-gray-300 hover:bg-gray-700 hover:text-white {{ end }} rounded block px-3 py-2 text-base font-medium"
-          href="{{ .URL }}"
-          >{{ .Name }}</a
+          class="{{ if eq $currentPage.Title .Title }} text-white bg-gray-900 {{ else }} text-gray-300 hover:bg-gray-700 hover:text-white {{ end }} rounded block px-3 py-2 text-base font-medium"
+          href="{{ .RelPermalink }}"
+          >{{ .Title }}</a
         >
       </li>
     {{ end }}
