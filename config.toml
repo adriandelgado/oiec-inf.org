@@ -3,6 +3,7 @@ languageCode = "es"
 title = "OIEC"
 author = "Adrian Delgado"
 
+summaryLength = 30
 pluralizelisttitles = false
 enableEmoji = true
 enableRobotsTXT = true

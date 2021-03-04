@@ -1,12 +1,14 @@
 {{ define "main" }}
   <main class="items-center flex-1 mx-4 mt-4 md:mx-12 lg:mx-24 sm:mt-16">
-    <ul>
+    <ul class="grid grid-cols-3 gap-10">
       {{ range .Paginator.Pages }}
         <li>
-          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-          <div>
-            {{ .Summary }}
-          </div>
+          <a href="{{ .RelPermalink }}"
+            ><h2 class="text-xl font-bold">{{ .Title }}</h2>
+            <div class="mt-5 text-justify">
+              {{ .Summary }}
+            </div>
+          </a>
         </li>
       {{ end }}
     </ul>
