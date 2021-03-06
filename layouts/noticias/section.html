@@ -1,14 +1,18 @@
 {{ define "main" }}
-  <main class="items-center flex-1 mx-4 mt-4 md:mx-12 lg:mx-24 sm:mt-16">
-    <ul class="grid grid-cols-3 gap-10">
+  <main>
+    <ul
+      class="grid max-w-5xl grid-cols-1 gap-8 p-8 mx-auto sm:grid-cols-2 lg:grid-cols-3"
+    >
       {{ range .Paginator.Pages }}
         {{ $thumbnail := .Resources.GetMatch "thumbnail.png" }}
-        <li>
+        <li class="overflow-hidden bg-white rounded shadow-lg">
           <a href="{{ .RelPermalink }}">
             <img src="{{ $thumbnail.RelPermalink }}" alt="" />
-            <h2 class="text-xl font-bold">{{ .Title }}</h2>
-            <div class="mt-5 text-justify">
-              {{ .Summary }}
+            <div class="p-2">
+              <h2 class="text-xl font-bold">{{ .Title }}</h2>
+              <div class="mt-5 text-justify">
+                {{ .Summary }}
+              </div>
             </div>
           </a>
         </li>
