@@ -5,6 +5,6 @@ date: {{ .Date }}
 author:
 tags: []
 categories: []
-images: []
+images: ["thumbnail.png"]
 draft: false
 ---
