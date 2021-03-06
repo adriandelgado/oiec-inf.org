@@ -1,4 +1,4 @@
-baseURL = "https://oiec-inf.org/"
+baseURL = "https://oiec-inf.netlify.app/"
 languageCode = "es"
 title = "OIEC"
 author = "Adrian Delgado"
