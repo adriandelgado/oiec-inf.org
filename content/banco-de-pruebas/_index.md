@@ -26,5 +26,5 @@ Recopilación de pruebas de ediciones pasadas de varias competencias.
 [cas2]: https://github.com/OIEC/Banco-de-Pruebas/tree/main/2021/SelectivoCCC
 [sol1]: https://github.com/OIEC/Banco-de-Pruebas/blob/main/2020/ONI/Practica/Soluciones/Soluciones_Practica_ONI2020.pdf
 [sol2]: https://github.com/OIEC/Banco-de-Pruebas/blob/main/2020/ONI/Fase1/soluciones/Soluciones_Fase1_ONI2020.pdf
-[sol3]: https://github.com/OIEC/Banco-de-Pruebas/tree/main/2020/ONI/Fase2
+[sol3]: https://github.com/OIEC/Banco-de-Pruebas/tree/main/ONI/2020/Fase2
 [sol4]: https://github.com/OIEC/Banco-de-Pruebas/tree/main/2021/SelectivoCCC

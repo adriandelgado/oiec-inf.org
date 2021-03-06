@@ -2,9 +2,11 @@
   <main class="items-center flex-1 mx-4 mt-4 md:mx-12 lg:mx-24 sm:mt-16">
     <ul class="grid grid-cols-3 gap-10">
       {{ range .Paginator.Pages }}
+        {{ $thumbnail := .Resources.GetMatch "thumbnail.png" }}
         <li>
-          <a href="{{ .RelPermalink }}"
-            ><h2 class="text-xl font-bold">{{ .Title }}</h2>
+          <a href="{{ .RelPermalink }}">
+            <img src="{{ $thumbnail.RelPermalink }}" alt="" />
+            <h2 class="text-xl font-bold">{{ .Title }}</h2>
             <div class="mt-5 text-justify">
               {{ .Summary }}
             </div>
