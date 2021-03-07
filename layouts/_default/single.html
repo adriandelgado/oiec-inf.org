@@ -1,11 +1,25 @@
 {{ define "main" }}
-  <main class="items-center flex-1 mx-4 mt-4 md:mx-12 lg:mx-24 sm:mt-16">
-    <article
-      class="mb-16 prose text-gray-700 sm:mx-auto lg:prose-lg prose-blue"
-    >
-      <h1>{{ .Title }}</h1>
+  <main class="mx-4 mt-4 md:mx-12 lg:mx-24 sm:mt-16">
+    <article class="flex flex-col items-center mb-16">
+      {{ with .Params.categories }}
+        <div class="flex w-full space-x-2 max-w-prose lg:text-lg">
+          {{ range . }}
+            {{ $href := print (relURL "categories/") (urlize .) }}
+            <a
+              class="ml-1 text-sm font-semibold tracking-wide text-gray-500 uppercase hover:text-gray-600"
+              href="{{ $href }}"
+              >{{ . }}</a
+            >
+          {{ end }}
+        </div>
+      {{ end }}
+      <div class="w-full prose lg:prose-lg prose-blue">
+        <h1>{{ .Title }}</h1>
+      </div>
       {{ partial "date-and-tags.html" . }}
-      {{ .Content }}
+      <div class="w-full prose lg:prose-lg prose-blue">
+        {{ .Content }}
+      </div>
     </article>
   </main>
 {{ end }}

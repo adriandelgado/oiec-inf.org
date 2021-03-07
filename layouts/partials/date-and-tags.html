@@ -1,14 +1,39 @@
 {{ $dateTime := .PublishDate.Format "2006-01-02" }}
-<time datetime="{{ $dateTime }}">
-  Publicado el: {{ .Date.Day }} de
-  {{ index $.Site.Data.meses (printf "%d" .Date.Month) }} de {{ .Date.Year }}
-  Ultima mod: {{ .Lastmod.Day }}
-  {{ index $.Site.Data.meses (printf "%d" .Lastmod.Month) }}
-  {{ .Lastmod.Year }}
-</time>
-{{ with .Params.tags }}
-  {{ range . }}
-    {{ $href := print (relURL "tags/") (urlize .) }}
-    <a href="{{ $href }}">{{ . }}</a>
+<div
+  class="flex items-center w-full mt-1 mb-5 space-x-4 lg:text-lg max-w-prose"
+>
+  <time
+    class="flex items-center space-x-1 text-gray-700"
+    datetime="{{ $dateTime }}"
+  >
+    <svg
+      class="w-6 h-6"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+        clip-rule="evenodd"
+      />
+    </svg>
+    <span>
+      {{ .Date.Day }} de {{ index $.Site.Data.meses (printf "%d" .Date.Month) }}
+      de
+      {{ .Date.Year }}
+    </span>
+  </time>
+  {{ with .Params.tags }}
+    <div class="flex space-x-2">
+      {{ range . }}
+        {{ $href := print (relURL "tags/") (urlize .) }}
+        <a
+          class="px-4 py-1 text-gray-600 bg-gray-300 rounded-full hover:text-gray-700 hover:bg-gray-400"
+          href="{{ $href }}"
+          >{{ . }}</a
+        >
+      {{ end }}
+    </div>
   {{ end }}
-{{ end }}
+</div>
