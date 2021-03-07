@@ -1,19 +1,25 @@
 {{ $pag := $.Paginator }}
 {{ if gt $pag.TotalPages 1 -}}
   <div class="flex items-center justify-center w-full px-8 mb-5">
-    <div class="flex justify-between flex-1 sm:hidden">
-      <a
-        href="#"
-        class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:text-gray-500"
-      >
-        Anterior
-      </a>
-      <a
-        href="#"
-        class="relative inline-flex items-center px-4 py-2 ml-3 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:text-gray-500"
-      >
-        Siguiente
-      </a>
+    <div
+      class="flex {{ if and $pag.HasPrev $pag.HasNext }}justify-between{{ else }}justify-center{{ end }} flex-1 sm:hidden"
+    >
+      {{ if $pag.HasPrev }}
+        <a
+          href="{{ $pag.Prev.URL }}"
+          class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:text-gray-500"
+        >
+          Anterior
+        </a>
+      {{ end }}
+      {{ if $pag.HasNext }}
+        <a
+          href="{{ $pag.Next.URL }}"
+          class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:text-gray-500"
+        >
+          Siguiente
+        </a>
+      {{ end }}
     </div>
     <nav
       class="relative z-0 hidden -space-x-px rounded-md shadow-sm sm:inline-flex"
