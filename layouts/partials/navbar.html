@@ -12,7 +12,7 @@
         <li class="flex">
           <a
             class="{{ if eq $currentPage.Title .Title }}bg-gray-900 text-white {{ else }}text-gray-300 hover:bg-gray-700 hover:text-white {{ end }} rounded px-3 py-2 text-sm font-medium text-center"
-            href="{{ .RelPermalink }}"
+            href="{{ .Permalink }}"
             >{{ .Title }}</a
           >
         </li>
@@ -65,7 +65,7 @@
       <li>
         <a
           class="{{ if eq $currentPage.Title .Title }} text-white bg-gray-900 {{ else }} text-gray-300 hover:bg-gray-700 hover:text-white {{ end }} rounded block px-3 py-2 text-base font-medium"
-          href="{{ .RelPermalink }}"
+          href="{{ .Permalink }}"
           >{{ .Title }}</a
         >
       </li>

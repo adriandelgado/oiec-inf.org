@@ -11,9 +11,9 @@
       {{ range .Paginator.Pages }}
         {{ $thumbnail := .Resources.GetMatch "thumbnail.png" }}
         <li class="overflow-hidden bg-white rounded shadow-lg">
-          <img src="{{ $thumbnail.RelPermalink }}" alt="" />
+          <img src="{{ $thumbnail.Permalink }}" alt="" />
           <div class="p-2">
-            <a href="{{ .RelPermalink }}">
+            <a href="{{ .Permalink }}">
               <h2 class="text-xl font-bold text-gray-900 truncate">
                 {{ .Title }}
               </h2>
