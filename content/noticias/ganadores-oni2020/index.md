@@ -1,6 +1,6 @@
 ---
 title: "Ganadores ONI2020"
-description: ""
+description: "Página oficial de la Olimpiada Informática Ecuatoriana"
 date: 2021-03-03T21:49:13-05:00
 author: "Omar Nicolás Paladines"
 tags: ["Olimpiada", "Resultados"]

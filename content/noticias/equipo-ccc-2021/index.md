@@ -1,6 +1,6 @@
 ---
 title: "Equipo CCC 2021"
-description: ""
+description: "Página oficial de la Olimpiada Informática Ecuatoriana"
 date: 2021-03-04T01:25:14-05:00
 author: "Omar Nicolás Paladines"
 tags: ["Resultados", "Selectivo"]

@@ -1,6 +1,6 @@
 ---
 title: "Convocatoria Selectivo Nacional 2"
-description: ""
+description: "Página oficial de la Olimpiada Informática Ecuatoriana"
 date: 2021-03-04T01:32:16-05:00
 author: "Omar Nicolás Paladines"
 tags: ["Selectivo"]

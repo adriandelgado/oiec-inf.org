@@ -1,6 +1,6 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
-description: ""
+description: "{{ .Site.Params.Description }}"
 date: {{ .Date }}
 author:
 tags: []

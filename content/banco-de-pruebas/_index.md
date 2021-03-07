@@ -1,6 +1,6 @@
 ---
 title: "Banco de Pruebas"
-description: ""
+description: "Página oficial de la Olimpiada Informática Ecuatoriana"
 date: 2021-03-03T00:44:03-05:00
 author:
 tags: []
