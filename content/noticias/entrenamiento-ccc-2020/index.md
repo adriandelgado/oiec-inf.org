@@ -1,6 +1,6 @@
 ---
 title: "Entrenamiento CCC 2020"
-description: "Página oficial de la Olimpiada Informática Ecuatoriana"
+description: ""
 date: 2021-03-04T01:10:07-05:00
 author: "Omar Nicolás Paladines"
 tags: ["Entrenamiento"]

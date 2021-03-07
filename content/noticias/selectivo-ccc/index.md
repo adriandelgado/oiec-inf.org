@@ -1,6 +1,6 @@
 ---
 title: "Selectivo Nacional Canadian Computing Competition (CCC)"
-description: "Página oficial de la Olimpiada Informática Ecuatoriana"
+description: ""
 date: 2021-03-04T00:21:31-05:00
 author: "Omar Nicolás Paladines"
 tags: ["Selectivo"]

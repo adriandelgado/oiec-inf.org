@@ -1,6 +1,6 @@
 ---
 title: "Calendario Olímpico"
-description: "Página oficial de la Olimpiada Informática Ecuatoriana"
+description: ""
 date: 2021-03-04T13:10:30-05:00
 author:
 tags: []

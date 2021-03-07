@@ -1,6 +1,6 @@
 ---
 title: "¿Cómo Prepararse?"
-description: "Página oficial de la Olimpiada Informática Ecuatoriana"
+description: ""
 date: 2021-03-04T12:05:50-05:00
 author:
 tags: []

@@ -1,6 +1,6 @@
 ---
 title: "Primera Fase ONI2020"
-description: "Página oficial de la Olimpiada Informática Ecuatoriana"
+description: ""
 date: 2021-03-03T21:32:27-05:00
 author: "Fernando Alberto"
 tags: ["Olimpiada"]

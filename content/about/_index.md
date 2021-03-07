@@ -1,6 +1,6 @@
 ---
 title: "¿Quiénes somos?"
-description: "Página oficial de la Olimpiada Informática Ecuatoriana"
+description: ""
 date: 2021-03-03T00:43:53-05:00
 author:
 tags: []
