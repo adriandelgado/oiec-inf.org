@@ -2,6 +2,7 @@
 title: "Entrenamiento CCC 2020"
 description: ""
 date: 2021-03-04T01:10:07-05:00
+2021: ["02"]
 author: "Omar Nicolás Paladines"
 tags: ["Entrenamiento"]
 categories: ["Internacional"]

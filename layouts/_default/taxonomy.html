@@ -1,0 +1,28 @@
+{{ define "main" }}
+  <main class="flex flex-col items-center">
+    <h1
+      class="w-full max-w-5xl px-8 pt-8 text-5xl font-extrabold text-gray-900"
+    >
+      {{ .Title }}
+    </h1>
+    <ul
+      class="grid max-w-5xl grid-cols-1 gap-8 p-8 mx-auto sm:grid-cols-2 lg:grid-cols-3"
+    >
+      {{ range .Paginator.Pages }}
+        <li class="overflow-hidden bg-white rounded shadow-lg">
+          <div class="p-2">
+            <a href="{{ .Permalink }}">
+              <h2 class="text-xl font-bold text-gray-900 truncate">
+                {{ .Title }}
+              </h2>
+            </a>
+            <div class="mt-5 text-justify text-gray-700 line-clamp-5">
+              {{ .Summary }}
+            </div>
+          </div>
+        </li>
+      {{ end }}
+    </ul>
+    {{ partial "pagination.html" . }}
+  </main>
+{{ end }}

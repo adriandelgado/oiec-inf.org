@@ -9,9 +9,19 @@ pluralizelisttitles = false
 enableEmoji = true
 enableRobotsTXT = true
 enableGitInfo = true
+canonifyURLs = true
 
 pygmentsCodefences = true
 pygmentsStyle = "vs"
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  2021 = "2021"
+
+[permalinks]
+  noticias = "/:year/:month/:slug/"
+  page = "/:slug/"
 
 [params]
   description = "Página oficial de la Olimpiada Informática Ecuatoriana"

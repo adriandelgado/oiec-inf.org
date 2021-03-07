@@ -2,6 +2,7 @@
 title: "Ganadores ONI2020"
 description: ""
 date: 2021-03-03T21:49:13-05:00
+2021: ["02"]
 author: "Omar Nicolás Paladines"
 tags: ["Olimpiada", "Resultados"]
 categories: ["Nacional"]

@@ -2,6 +2,7 @@
 title: "Convocatoria Olimpiada Nacional de Informática 2020"
 description: ""
 date: 2021-03-03T00:42:56-05:00
+2021: ["03"]
 author: "Fernando Alberto"
 tags: ["Olimpiada"]
 categories: ["Nacional"]

@@ -1,7 +1,8 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
-description: "{{ .Site.Params.Description }}"
+description: ""
 date: {{ .Date }}
+{{ dateFormat "2006" .Date }}: "{{ dateFormat "01" .Date }}"
 author:
 tags: []
 categories: []

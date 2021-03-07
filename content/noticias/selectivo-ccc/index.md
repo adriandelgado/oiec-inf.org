@@ -2,6 +2,7 @@
 title: "Selectivo Nacional Canadian Computing Competition (CCC)"
 description: ""
 date: 2021-03-04T00:21:31-05:00
+2021: ["02"]
 author: "Omar Nicolás Paladines"
 tags: ["Selectivo"]
 categories: ["Nacional"]
