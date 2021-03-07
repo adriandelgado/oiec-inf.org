@@ -4,6 +4,7 @@ title = "OIEC"
 author = "Adrian Delgado"
 
 summaryLength = 30
+paginate = 1
 pluralizelisttitles = false
 enableEmoji = true
 enableRobotsTXT = true
