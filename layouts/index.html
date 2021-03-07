@@ -4,8 +4,8 @@
       class="flex flex-col items-center justify-between max-w-6xl mx-auto space-x-6 lg:flex-row"
     >
       <div class="w-full text-center lg:text-left lg:w-1/2">
-        <span class="block text-xl">La</span>
-        <h1 class="my-4 text-4xl font-bold leading-tight sm:text-5xl">
+        <span class="block ml-1 text-2xl">La</span>
+        <h1 class="mt-2 mb-4 text-4xl font-bold leading-tight sm:text-5xl">
           Olimpiada Informática Ecuatoriana
         </h1>
         <span class="block mb-8 text-2xl leading-normal">
@@ -24,8 +24,30 @@
         />
       </div>
     </section>
-    <section>
-      <h2>Noticias</h2>
+    <section class="flex flex-col items-center max-w-6xl mx-auto mt-9">
+      <h2 class="text-4xl font-bold leading-tight sm:text-5xl">
+        Últimas noticias
+      </h2>
+      <div
+        class="grid grid-cols-1 gap-8 p-8 mx-auto sm:grid-cols-2 lg:grid-cols-3"
+      >
+        {{ range first 3 (.GetPage "/noticias").Pages }}
+          {{ $thumbnail := .Resources.GetMatch "thumbnail.png" }}
+          <article class="overflow-hidden bg-white rounded shadow-lg">
+            <img src="{{ $thumbnail.Permalink }}" alt="" />
+            <div class="p-2">
+              <a href="{{ .Permalink }}">
+                <h2 class="text-xl font-bold text-gray-900 truncate">
+                  {{ .Title }}
+                </h2>
+              </a>
+              <div class="mt-5 text-justify text-gray-700 line-clamp-5">
+                {{ .Summary }}
+              </div>
+            </div>
+          </article>
+        {{ end }}
+      </div>
     </section>
   </main>
 {{ end }}
