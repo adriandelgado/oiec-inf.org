@@ -1,11 +1,11 @@
 {{ define "main" }}
   <main class="px-5 pt-6 lg:pt-10 xl:pt-14 lg:px-10 xl:px-14">
     <section
-      class="flex flex-col items-center justify-between max-w-6xl mx-auto space-x-6 lg:flex-row"
+      class="flex flex-col items-center justify-between max-w-5xl px-4 mx-auto space-x-6 md:flex-row"
     >
-      <div class="w-full text-center lg:text-left lg:w-1/2">
+      <div class="w-full text-center md:text-left md:w-1/2">
         <span class="block ml-1 text-2xl">La</span>
-        <h1 class="mt-2 mb-4 text-4xl font-bold leading-tight sm:text-5xl">
+        <h1 class="mt-2 mb-4 text-4xl font-bold leading-tight md:text-5xl">
           Olimpiada Informática Ecuatoriana
         </h1>
         <span class="block mb-8 text-2xl leading-normal">
@@ -15,7 +15,7 @@
         </span>
       </div>
       <div
-        class="flex items-center justify-center w-full lg:justify-end lg:w-1/2"
+        class="items-center justify-center hidden w-full md:flex md:justify-end md:w-1/2"
       >
         <img
           class="w-full h-auto max-w-xl"
@@ -24,12 +24,12 @@
         />
       </div>
     </section>
-    <section class="flex flex-col items-center max-w-6xl mx-auto mt-9">
-      <h2 class="text-4xl font-bold leading-tight sm:text-5xl">
+    <section class="flex flex-col items-center max-w-5xl px-4 mx-auto mt-9">
+      <h2 class="text-4xl font-bold leading-tight md:text-5xl">
         Últimas noticias
       </h2>
       <div
-        class="grid grid-cols-1 gap-8 p-8 mx-auto sm:grid-cols-2 lg:grid-cols-3"
+        class="grid grid-cols-1 gap-8 py-8 mx-auto sm:grid-cols-2 lg:grid-cols-3"
       >
         {{ range first 3 (.GetPage "/noticias").Pages }}
           {{ $thumbnail := .Resources.GetMatch "thumbnail.png" }}

@@ -1,107 +1,121 @@
-<footer class="bg-gray-800">
-  <div class="container px-8 mx-auto">
-    <div class="flex flex-col w-full py-6 md:flex-row">
-      <div class="flex-1 mb-6 text-gray-100">
-        <a
-          class="text-2xl font-bold text-gray-100 no-underline hover:no-underline lg:text-4xl"
-          href="#"
-        >
-          OIEC
-        </a>
-      </div>
-      <div class="flex-1">
-        <p class="text-gray-100 uppercase md:mb-6">Links</p>
-        <ul class="mb-6 list-reset">
-          <li class="inline-block mt-2 mr-2 md:block md:mr-0">
+{{ $reglamento := .Site.GetPage "/reglamento" }}
+{{ $banco := .Site.GetPage "/banco-de-pruebas" }}
+{{ $prepararse := .Site.GetPage "/como-prepararse" }}
+{{ $calendario := .Site.GetPage "/calendario-olimpico" }}
+{{ $noticias := .Site.GetPage "/noticias" }}
+{{ $contacto := .Site.GetPage "/contact" }}
+{{ $about := .Site.GetPage "/about" }}
+<footer class="text-gray-100 bg-gray-800 shado">
+  <div
+    class="items-start max-w-5xl p-5 mx-auto md:grid md:grid-cols-5 md:grid-rows-1"
+  >
+    <div
+      class="flex items-center justify-center mb-5 space-x-2 md:col-span-1 md:justify-start"
+    >
+      <img
+        src="/logo-oiec.svg"
+        alt="logo-oiec"
+        class="w-8 h-8 md:hidden lg:block"
+      />
+      <h2 class="text-3xl font-bold">OIEC</h2>
+    </div>
+    <div
+      class="grid grid-flow-row grid-cols-2 gap-y-6 sm:justify-between sm:flex md:col-span-4"
+    >
+      <div class="space-y-3">
+        <h3 class="text-xs font-bold tracking-wide text-gray-400 uppercase">
+          Frecuentes
+        </h3>
+        <ul class="space-y-1">
+          <li>
             <a
-              href="#"
-              class="text-gray-100 no-underline hover:underline hover:text-pink-500"
-              >FAQ</a
+              class="hover:text-white hover:underline"
+              href="{{ $reglamento.Permalink }}"
+              >{{ $reglamento.Title }}</a
             >
           </li>
-          <li class="inline-block mt-2 mr-2 md:block md:mr-0">
+          <li>
             <a
-              href="#"
-              class="text-gray-100 no-underline hover:underline hover:text-pink-500"
-              >Help</a
+              class="hover:text-white hover:underline"
+              href="{{ $banco.Permalink }}"
+              >{{ $banco.Title }}</a
             >
           </li>
-          <li class="inline-block mt-2 mr-2 md:block md:mr-0">
+          <li>
             <a
-              href="#"
-              class="text-gray-100 no-underline hover:underline hover:text-pink-500"
-              >Support</a
+              class="hover:text-white hover:underline"
+              href="{{ $prepararse.Permalink }}"
+              >{{ $prepararse.Title }}</a
+            >
+          </li>
+          <li>
+            <a
+              class="hover:text-white hover:underline"
+              href="{{ $calendario.Permalink }}"
+              >{{ $calendario.Title }}</a
             >
           </li>
         </ul>
       </div>
-      <div class="flex-1">
-        <p class="text-gray-100 uppercase md:mb-6">Legal</p>
-        <ul class="mb-6 list-reset">
-          <li class="inline-block mt-2 mr-2 md:block md:mr-0">
+      <div class="space-y-3">
+        <h3 class="text-xs font-bold tracking-wide text-gray-400 uppercase">
+          Relacionados
+        </h3>
+        <ul class="space-y-1">
+          <li>
             <a
-              href="#"
-              class="text-gray-100 no-underline hover:underline hover:text-pink-500"
-              >Terms</a
-            >
-          </li>
-          <li class="inline-block mt-2 mr-2 md:block md:mr-0">
-            <a
-              href="#"
-              class="text-gray-100 no-underline hover:underline hover:text-pink-500"
-              >Privacy</a
+              class="hover:text-white hover:underline"
+              href="https://www.foec.edu.ec/"
+              >FOEC</a
             >
           </li>
         </ul>
       </div>
-      <div class="flex-1">
-        <p class="text-gray-100 uppercase md:mb-6">Social</p>
-        <ul class="mb-6 list-reset">
-          <li class="inline-block mt-2 mr-2 md:block md:mr-0">
+      <div class="space-y-3">
+        <h3 class="text-xs font-bold tracking-wide text-gray-400 uppercase">
+          Redes
+        </h3>
+        <ul class="space-y-1">
+          <li>
             <a
-              href="#"
-              class="text-gray-100 no-underline hover:underline hover:text-pink-500"
+              class="hover:text-white hover:underline"
+              href="https://www.facebook.com/OlimpiadaInformaticaEcuatoriana/"
               >Facebook</a
             >
           </li>
-          <li class="inline-block mt-2 mr-2 md:block md:mr-0">
+          <li>
             <a
-              href="#"
-              class="text-gray-100 no-underline hover:underline hover:text-pink-500"
-              >Linkedin</a
-            >
-          </li>
-          <li class="inline-block mt-2 mr-2 md:block md:mr-0">
-            <a
-              href="#"
-              class="text-gray-100 no-underline hover:underline hover:text-pink-500"
-              >Twitter</a
+              class="hover:text-white hover:underline"
+              href="https://www.instagram.com/oiec.inf/"
+              >Instagram</a
             >
           </li>
         </ul>
       </div>
-      <div class="flex-1">
-        <p class="text-gray-100 uppercase md:mb-6">Company</p>
-        <ul class="mb-6 list-reset">
-          <li class="inline-block mt-2 mr-2 md:block md:mr-0">
+      <div class="space-y-3">
+        <h3 class="text-xs font-bold tracking-wide text-gray-400 uppercase">
+          Organización
+        </h3>
+        <ul class="space-y-1">
+          <li>
             <a
-              href="#"
-              class="text-gray-100 no-underline hover:underline hover:text-pink-500"
-              >Official Blog</a
+              class="hover:text-white hover:underline"
+              href="{{ $noticias.Permalink }}"
+              >{{ $noticias.Title }}</a
             >
           </li>
-          <li class="inline-block mt-2 mr-2 md:block md:mr-0">
+          <li>
             <a
-              href="#"
-              class="text-gray-100 no-underline hover:underline hover:text-pink-500"
-              >About Us</a
+              class="hover:text-white hover:underline"
+              href="{{ $contacto.Permalink }}"
+              >{{ $contacto.Title }}</a
             >
           </li>
-          <li class="inline-block mt-2 mr-2 md:block md:mr-0">
+          <li>
             <a
-              href="#"
-              class="text-gray-100 no-underline hover:underline hover:text-pink-500"
-              >Contact</a
+              class="hover:text-white hover:underline"
+              href="{{ $about.Permalink }}"
+              >{{ $about.Title }}</a
             >
           </li>
         </ul>
