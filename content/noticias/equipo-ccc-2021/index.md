@@ -1,8 +1,8 @@
 ---
 title: "Equipo CCC 2021"
 description: ""
-date: 2021-03-04T01:25:14-05:00
-2021: ["02"]
+date: 2021-01-11T01:25:14-05:00
+2021: ["01"]
 author: "Omar Nicolás Paladines"
 tags: ["Resultados", "Selectivo"]
 categories: ["Internacional"]

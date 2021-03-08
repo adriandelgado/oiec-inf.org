@@ -1,7 +1,7 @@
 ---
 title: "Convocatoria Selectivo Nacional 2"
 description: ""
-date: 2021-03-04T01:32:16-05:00
+date: 2021-02-08T01:32:16-05:00
 2021: ["02"]
 author: "Omar Nicolás Paladines"
 tags: ["Selectivo"]
