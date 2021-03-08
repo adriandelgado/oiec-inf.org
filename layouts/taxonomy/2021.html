@@ -9,9 +9,7 @@
       class="grid max-w-5xl grid-cols-1 gap-8 p-8 mx-auto sm:grid-cols-2 lg:grid-cols-3"
     >
       {{ range .Paginator.Pages }}
-        {{ $thumbnail := .Resources.GetMatch "thumbnail.png" }}
         <li class="overflow-hidden bg-white rounded shadow-lg">
-          <img src="{{ $thumbnail.Permalink }}" alt="" />
           <div class="p-2">
             <a href="{{ .Permalink }}">
               <h2 class="text-xl font-bold text-gray-900 truncate">
