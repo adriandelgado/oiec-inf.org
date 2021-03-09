@@ -40,4 +40,7 @@
   {{- template "_internal/opengraph.html" . -}}
   {{- template "_internal/twitter_cards.html" . -}}
   {{- template "_internal/schema.html" . -}}
+
+  {{ $script := resources.Get "js/main.js" | minify }}
+  <script src="{{ $script.Permalink }}" defer></script>
 </head>
