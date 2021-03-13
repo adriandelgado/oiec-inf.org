@@ -1,7 +1,8 @@
+import os
 from collections import defaultdict 
 from github import Github
 
-access_key = "8c61438716ef3169fb637b1ab7a0ea0ce75fbbef"
+access_token = os.getenv('ACCESS_TOKEN')
 repo_name = "OIEC/Banco-de-Pruebas"
 repo_dir = ""
 path_to_yaml = "github_links.yaml"
@@ -47,7 +48,7 @@ def createYamlFile(repo, path_to_yaml):
     dicToYaml(dic, path_to_yaml)
 
 def main():
-    g = Github(access_key)
+    g = Github(access_token)
     repo = g.get_repo(repo_name)
     createYamlFile(repo, path_to_yaml)
 
