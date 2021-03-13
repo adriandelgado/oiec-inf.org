@@ -1,3 +1,4 @@
 node_modules/
 hugo_stats.json
 resources/_gen
+github_links.yaml
