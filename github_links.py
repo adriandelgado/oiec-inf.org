@@ -1,7 +1,7 @@
 from collections import defaultdict 
 from github import Github
 
-access_key = "INSERT ACCESS KEY HERE"
+access_key = "8c61438716ef3169fb637b1ab7a0ea0ce75fbbef"
 repo_name = "OIEC/Banco-de-Pruebas"
 repo_dir = ""
 path_to_yaml = "github_links.yaml"
