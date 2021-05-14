@@ -4,7 +4,7 @@ Código fuente de la página oficial de la Olimpiada Informática Ecuatoriana (O
 
 ## Desarrollo
 
-Este proyecto usa [`Hugo`](https://gohugo.io/), [`Tailwind CSS`](https://gohugo.io/),
+Este proyecto usa [`Hugo`](https://gohugo.io/), [`Tailwind CSS`](https://tailwindcss.com/),
 `NPM` y [`Node.js`](https://nodejs.org/) (incluye NPM).
 
 Después de clonar el repositorio, instale todas las dependencias:
