@@ -1,6 +1,7 @@
 import os
 import requests
 from collections import defaultdict
+import fileinput
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -10,33 +11,22 @@ apiURL = (
     "https://api.github.com/repos/OIEC/Banco-de-Pruebas/git/trees/main?recursive=true"
 )
 
-before_table = """{{ define "main" }}
-  <main class="items-center flex-1 mx-4 mt-4 md:mx-12 lg:mx-24 sm:mt-16">
-    <article
-      class="mb-16 prose text-gray-700 sm:mx-auto lg:prose-lg prose-blue"
-    >
-      <h1>{{ .Title }}</h1>
-        <table>
-"""
-
-after_table = """</table>
-    </article>
-  </main>
-{{ end }}
-"""
+before_table = """{{< rawhtml >}}\n\n<table>"""
+after_table = """</table>\n\n{{< /rawhtml >}}"""
 
 
 def main():
     directories = get_directories_from_API(apiURL)
 
     ONI_HTML = oni_table(directories)
+    ONI_dir = os.path.join(BASE_DIR, "content/banco-de-pruebas/oni", "index.md")
+    insert_into_markdown(ONI_dir, ONI_HTML)
 
     selectivos_HTML = selectivos_table(directories)
-
-    with open(
-        os.path.join(BASE_DIR, "layouts/banco-de-pruebas", "section.html"), "w"
-    ) as page:
-        page.write(selectivos_HTML)
+    selectivos_dir = os.path.join(
+        BASE_DIR, "content/banco-de-pruebas/selectivos", "index.md"
+    )
+    insert_into_markdown(selectivos_dir, selectivos_HTML)
 
 
 def get_directories_from_API(url):
@@ -91,6 +81,15 @@ def create_table(directories, heading, titulo):
         )
 
     return before_table + html + after_table
+
+
+def insert_into_markdown(directory, raw_html):
+    with fileinput.input(directory, inplace=True) as md:
+        for line in md:
+            if line == "{{< rawhtml >}}\n":
+                print(raw_html)
+                break
+            print(line, end="")
 
 
 if __name__ == "__main__":
