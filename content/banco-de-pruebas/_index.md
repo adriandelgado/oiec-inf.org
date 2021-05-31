@@ -11,6 +11,13 @@ draft: false
 
 Recopilación de pruebas de ediciones pasadas de varias competencias.
 
+{{< rawhtml >}}
+
+  <p class="speshal-fancy-custom">
+    This is <strong>raw HTML</strong>, inside Markdown.
+  </p>
+{{< /rawhtml >}}
+
 | Olimpiada     | Fase     | Concurso        | Casos          | Soluciones     |
 | :------------ | :------- | :-------------- | :------------- | :------------- |
 | ONI 2020      | Práctica | [OmegaUp][con1] |                | [GitHub][sol1] |
