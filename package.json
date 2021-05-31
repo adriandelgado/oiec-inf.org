@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "server": "hugo server",
-    "build": "NODE_ENV=production hugo --gc --minify --cleanDestinationDir"
+    "build": "NODE_ENV=production npm run tables && hugo --gc --minify --cleanDestinationDir",
+    "tables": "python build/github_links.py"
   },
   "author": "Adrian Delgado",
   "license": "MIT",
