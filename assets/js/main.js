@@ -23,7 +23,7 @@ const toggleVisibility = (e) => {
 };
 
 const handleDropdown = (e) => {
-  const clickedItem = e.parentElement.lastChild.previousSibling;
+  const clickedItem = e.nextElementSibling;
 
   toggleVisibility(clickedItem);
 
