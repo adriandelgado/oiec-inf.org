@@ -1,3 +1,4 @@
+// Mobile menu
 const button = document.getElementById("js-menu-button");
 const iconOpen = document.getElementById("js-menu-open");
 const iconClosed = document.getElementById("js-menu-closed");
@@ -10,29 +11,41 @@ button.addEventListener("click", () => {
   menu.classList.toggle("hidden");
 });
 
+// Desktop Navbar
 const btnInformacion = document.getElementById("js-informacion");
-const menuInfo = document.getElementById("js-menu-informacion");
-const toggleInfoMenu = () => {
-  menuInfo.classList.toggle("block");
-  menuInfo.classList.toggle("hidden");
-};
-btnInformacion.addEventListener("click", toggleInfoMenu);
-
 const btnAcademico = document.getElementById("js-academico");
-const menuAcad = document.getElementById("js-menu-academico");
-const toggleAcadMenu = () => {
-  menuAcad.classList.toggle("block");
-  menuAcad.classList.toggle("hidden");
-};
-btnAcademico.addEventListener("click", toggleAcadMenu);
 
-document.addEventListener("click", (event) => {
-  if (!btnInformacion.contains(event.target)) {
-    menuInfo.classList.remove("block");
-    menuInfo.classList.add("hidden");
+let opened = null;
+
+const toggleVisibility = (e) => {
+  e.classList.toggle("block");
+  e.classList.toggle("hidden");
+};
+
+const handleDropdown = (e) => {
+  const clickedItem = e.parentElement.lastChild.previousSibling;
+
+  toggleVisibility(clickedItem);
+
+  if (!opened) {
+    opened = clickedItem;
+  } else if (opened === clickedItem) {
+    opened = null;
+  } else {
+    toggleVisibility(opened);
+    opened = clickedItem;
   }
-  if (!btnAcademico.contains(event.target)) {
-    menuAcad.classList.remove("block");
-    menuAcad.classList.add("hidden");
+};
+
+const handleClick = (e) => {
+  if (btnInformacion.contains(e.target)) {
+    handleDropdown(btnInformacion);
+  } else if (btnAcademico.contains(e.target)) {
+    handleDropdown(btnAcademico);
+  } else if (opened) {
+    toggleVisibility(opened);
+    opened = null;
   }
-});
+};
+
+document.addEventListener("click", handleClick);
